@@ -1,0 +1,11 @@
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  mat-checkbox {
+    padding: 0;
+    margin: 0;
+  }
+  

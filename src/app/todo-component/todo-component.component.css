@@ -1,6 +1,6 @@
 /* Main container */
 .todo-app {
-    max-width: 700px;
+    max-width: 1400px;
     margin: 40px auto;
     background-color: #ffffff;
     padding: 30px;
@@ -12,116 +12,14 @@
   .heading {
     text-align: center;
     font-size: 2.5rem;
-    color: #00796b;
+    color: #006aff;
     margin-bottom: 20px;
   }
   
-  /* Form styling */
-  .todo-form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .input-title,
-  .input-date {
-    flex: 1 1 200px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .input-title:focus,
-  .input-date:focus {
-    outline: none;
-    border-color: #00796b;
-    box-shadow: 0 0 5px rgba(0, 121, 107, 0.2);
-  }
-  
-  .btn-add {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-add:hover {
-    background-color: #004d40;
-  }
-  
-  /* Todos */
-  .todo-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .card {
-    background-color: #fafafa;
-    padding: 20px;
-    border-left: 5px solid #00796b;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Completed card effect */
-  .card.completed {
-    background-color: #e0f2f1;
-    text-decoration: line-through;
-    opacity: 0.8;
-  }
-  
-  /* Header section */
-  .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .card-title {
-    font-size: 1.4rem;
-    margin: 0;
-  }
-  
-  /* Actions */
-  .card-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .btn-delete {
-    background: transparent;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    color: #d32f2f;
-    transition: transform 0.2s ease;
-  }
-  
-  .btn-delete:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Info */
-  .info p {
-    margin: 6px 0;
-    font-size: 0.95rem;
-  }
-  
-  /* No todos */
-  .no-todos {
-    text-align: center;
-    font-style: italic;
-    color: #777;
-  }
 
-  
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px; /* optional spacing */
+}
   
