@@ -1,0 +1,42 @@
+<h1 class="heading">Todo List</h1>
+
+<div class="todo-app">
+    <form (ngSubmit)="isEditing ? updateTodo() : addTodo()" #todoForm="ngForm" class="todo-form">
+        <input name="title" [(ngModel)]="newTitle" placeholder="New task" required class="input-title" />
+        <input type="date" name="dueDate" [(ngModel)]="newDueDate" class="input-date" />
+
+        <button type="submit" class="btn-add">
+            {{ isEditing ? 'Update' : 'Add' }}
+        </button>
+        <input name="description" [(ngModel)]="newDescription" placeholder="Enter the description" required
+            class="input-title" />
+    </form>
+
+    <hr />
+
+    <div class="todo-container">
+        @for (todo of todos(); track todo.id) {
+        <div class="card" [class.completed]="todo.completed">
+            <div class="card-header">
+                <h2 class="card-title">{{ todo.title }}</h2>
+                <div class="card-actions">
+                    <input type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo.id)"
+                        title="Toggle Complete" />
+                    <button (click)="deleteTodo(todo.id)" class="btn-delete" title="Delete Todo">🗑️</button>
+                    <button (click)="setEditingTodo(todo)" class="btn-edit" title="Edit Todo">✏️</button>
+                </div>
+            </div>
+
+            <div class="info">
+                <p><strong>Status:</strong> {{ todo.completed ? '✅ Completed' : '⏳ Pending' }}</p>
+                <p><strong>Description:</strong> {{ todo.description }}</p>
+                <p><strong>Due:</strong> {{ todo.dueDate }}</p>
+                <p><strong>Created:</strong> {{ todo.createdAt }}</p>
+            </div>
+        </div>
+        }
+        @empty {
+        <p class="no-todos">No todos yet.</p>
+        }
+    </div>
+</div>
