@@ -4,7 +4,8 @@ import { TodoFormModalComponent } from '../todo-form-modal/todo-form-modal.compo
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { TodoTableComponent } from '../../todo-table/todo-table.component';
+import { TodoTableComponent } from '../todo-table/todo-table.component';
+
 
 @Component({
   selector: 'app-todo-component',

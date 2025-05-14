@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import { Todo } from '../todo/todo-form-modal/todo.model';
-import { TodoService } from '../todo/todo-form-modal/todo.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { TodoFormModalComponent } from '../todo/todo-form-modal/todo-form-modal.component';
+import { TodoService } from '../todo.service';
+import { Todo } from '../todo.model';
+import { TodoFormModalComponent } from '../todo-form-modal/todo-form-modal.component';
 
 @Component({
   selector: 'app-todo-table',
