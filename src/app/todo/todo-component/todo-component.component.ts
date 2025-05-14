@@ -1,18 +1,25 @@
+// todo/todo-component/todo-component.component.ts
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { TodoFormModalComponent } from '../todo-form-modal/todo-form-modal.component';
+import { TodoFormModalComponent } from '../../todo-form-modal/todo-form-modal.component';
 import { MatButtonModule } from '@angular/material/button';
-import { TodoTableComponent } from "../todo-table/todo-table.component";
+import { TodoTableComponent } from "../../todo-table/todo-table.component";
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-todo-component',
-  imports: [MatButtonModule, TodoTableComponent],
+  standalone: true,
+  imports: [
+    MatButtonModule, 
+    MatIconModule,
+    MatToolbarModule,
+    TodoTableComponent
+  ],
   templateUrl: './todo-component.component.html',
   styleUrls: ['./todo-component.component.css']
 })
 export class TodoComponentComponent {
-
-
   constructor(private dialog: MatDialog) { }
 
   openDialog(): void {
