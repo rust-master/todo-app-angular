@@ -1,4 +1,3 @@
-// todo/todo-component/todo-component.component.ts
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { TodoFormModalComponent } from '../../todo-form-modal/todo-form-modal.component';
@@ -24,12 +23,12 @@ export class TodoComponentComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(TodoFormModalComponent, {
-      width: '900px',
-      height: '460px',
-      disableClose: false
+      width: '500px',
+      disableClose: false,
+      autoFocus: true
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(() => {
       console.log('Dialog closed');
     });
   }

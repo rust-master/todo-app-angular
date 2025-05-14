@@ -1,4 +1,4 @@
-<h2 mat-dialog-title>Add New Task</h2>
+<h2 mat-dialog-title>{{ isEditMode ? 'Edit Task' : 'Add New Task' }}</h2>
 
 <mat-dialog-content>
   <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="form-container">
@@ -38,7 +38,9 @@
     <!-- Actions -->
     <mat-dialog-actions align="end">
       <button mat-button type="button" mat-dialog-close>Cancel</button>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit">
+        {{ isEditMode ? 'Update' : 'Submit' }}
+      </button>
     </mat-dialog-actions>
   </form>
 </mat-dialog-content>

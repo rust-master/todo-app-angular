@@ -6,8 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { TodoEditModalComponent } from '../todo-edit-modal/todo-edit-modal.component';
-
+import { TodoFormModalComponent } from '../todo-form-modal/todo-form-modal.component';
 
 @Component({
   selector: 'app-todo-table',
@@ -17,18 +16,15 @@ import { TodoEditModalComponent } from '../todo-edit-modal/todo-edit-modal.compo
 })
 export class TodoTableComponent implements OnInit {
   todos: Todo[] = [];
-
   displayedColumns: string[] = ['todo-id', 'todo-title', 'todo-description', 'todo-status', 'todo-due-date', 'todo-created-date', 'todo-actions'];
-  
 
   constructor(
     private todoService: TodoService,
     private dialog: MatDialog
-    
   ) {}
 
   openEditModal(todo: Todo): void {
-    this.dialog.open(TodoEditModalComponent, {
+    this.dialog.open(TodoFormModalComponent, {
       width: '500px',
       disableClose: false,
       autoFocus: true,
@@ -40,10 +36,6 @@ export class TodoTableComponent implements OnInit {
     this.todoService.todos$.subscribe(data => {
       this.todos = data;
     });
-  }
-
-  onEdit(todo: Todo) {
-    console.log(todo.id);
   }
 
   onDelete(todo: Todo) {
