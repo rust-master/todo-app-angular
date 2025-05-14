@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { TodoFormModalComponent } from '../../todo-form-modal/todo-form-modal.component';
+import { TodoFormModalComponent } from '../todo-form-modal/todo-form-modal.component';
 import { MatButtonModule } from '@angular/material/button';
-import { TodoTableComponent } from "../../todo-table/todo-table.component";
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { TodoTableComponent } from '../../todo-table/todo-table.component';
 
 @Component({
   selector: 'app-todo-component',
